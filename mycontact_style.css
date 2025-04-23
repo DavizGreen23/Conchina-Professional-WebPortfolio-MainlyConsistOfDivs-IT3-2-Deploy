@@ -1,0 +1,167 @@
+/* Reset and background */
+body, html {
+   margin: 0;
+   padding: 0;
+   font-family: 'Segoe UI', sans-serif;
+   color: #fff;
+   background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+   background-attachment: fixed;
+   background-size: 400% 400%;
+   animation: gradientShift 30s ease infinite;
+   overflow-x: hidden;
+ }
+ 
+ /* Background Gradient Animation */
+ @keyframes gradientShift {
+   0% { background-position: 0% 50%; }
+   50% { background-position: 100% 50%; }
+   100% { background-position: 0% 50%; }
+ }
+ 
+ /* ===== Navigation Styles ===== */
+ .cred-nav-wrapper {
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 1000;
+ }
+ 
+ .cred-nav-bar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background: rgba(15, 32, 39, 0.7);
+   backdrop-filter: blur(8px);
+   padding: 12px 24px;
+   flex-wrap: wrap;
+ }
+ 
+ .cred-nav-logo {
+   color: #00ffff;
+   font-weight: bold;
+   font-size: 1.8em;
+   text-shadow: 0 0 10px #00ffff;
+ }
+ 
+ .cred-nav-toggle {
+   display: none;
+   flex-direction: column;
+   cursor: pointer;
+ }
+ 
+ .cred-bar {
+   width: 25px;
+   height: 3px;
+   background-color: #fff;
+   margin: 4px 0;
+ }
+ 
+ .cred-nav-links {
+   display: flex;
+   gap: 20px;
+ }
+ 
+ .cred-nav-item a {
+   color: #fff;
+   text-decoration: none;
+   font-weight: 600;
+   font-size: 1.1em;
+   transition: color 0.3s ease, transform 0.3s ease;
+ }
+ 
+ .cred-nav-item a:hover {
+   color: #0ff;
+ }
+ 
+ /* ===== Responsive Navigation ===== */
+ @media (max-width: 768px) {
+   .cred-nav-toggle {
+     display: flex;
+   }
+ 
+   .cred-nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: rgba(15, 32, 39, 0.95);
+      padding: 10px 0;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      text-align: center;
+   }
+ 
+   .cred-nav-links.active {
+     display: flex;
+   }
+ 
+   .cred-nav-item {
+     padding: 15px 30px;
+   }
+ }
+ 
+ /* Contact Section */
+ .contact-container {
+   text-align: center;
+   padding: 120px 20px 60px; 
+ }
+ 
+ .contact-container h1 {
+   font-size: 2.5em;
+   margin-bottom: 10px;
+ }
+ 
+ .contact-container p {
+   font-size: 1.2em;
+   color: #bbb;
+ }
+ 
+ .contact-info {
+   margin-top: 40px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 25px;
+ }
+ 
+ .contact-item {
+   background-color: rgba(255, 255, 255, 0.05);
+   padding: 15px 30px;
+   border-radius: 12px;
+   width: fit-content;
+   backdrop-filter: blur(6px);
+   box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+   transition: transform 0.3s ease;
+ }
+ 
+ .contact-item:hover {
+   transform: scale(1.05);
+ }
+ 
+ .contact-item span {
+   font-size: 1.5em;
+   margin-right: 10px;
+ }
+ 
+ /* === Footer === */
+ .cred-footer {
+   width: 100%;
+   padding: 20px;
+   background: rgba(15, 32, 39, 0.8);
+   text-align: center;
+   color: #fff;
+   margin-top: 40px;
+ }
+ 
+ .cred-social-icons a {
+   color: #00ffff;
+   margin: 0 15px;
+   font-size: 1.5rem;
+   transition: transform 0.3s ease;
+ }
+ 
+ .cred-social-icons a:hover {
+   color: #fff;
+   transform: scale(1.1);
+ }
+ 
